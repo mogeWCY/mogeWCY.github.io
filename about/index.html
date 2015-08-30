@@ -2,14 +2,21 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-    <meta content="yes" name="apple-mobile-web-app-capable"><!--safiri全屏浏览-->
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta content="telephone=no" name="format-detection">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<!-- 含义依次是宽度等于设备宽度，默认不缩放，禁止缩放，网页加载时隐藏地址栏和导航栏-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+  <!--是否启动webapp功能，会删除默认的苹果工具栏和菜单栏。-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!--设置手机信号，电池状态，手机时间的颜色-->
+<meta name="format-detection"content="telephone=no, email=no" />
+<!--禁止数字识别电话号码，邮箱-->
 	<title>个人页面</title>
 	<style type="text/css">
 	  body{
-	  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+	  font-family:  Verdana, Arial, Helvetica, sans-serif;
+	  background:rgba(10,10,100,0.4);
+	  margin:0px;
+	  padding:0px;
 	  }
 	  a, img {
     -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
@@ -18,11 +25,176 @@
       -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
        user-select: none;
       }
+      header{
+        width:100%;
+        text-align: center;
+        }
+      header img{
+         width:12em;
+         height:12em;
+         --webkit-border-radius: 50%;
+         border-radius: 50%;
+      }
+      header span{
+      display: block;
+      color:rgba(50,20,70,0.8);
+      font-size: 1.5em;
+      margin-top: 1em;
+      letter-spacing: 0.3em;
+      }
+      .wrap-page{
+        width:100%;
+        margin:2em 0em;
+        color:#fff;
+      }
+      .wrap-page h3{
+        font-size: 1.2em;
+      }
+      .wrap-page p{
+        line-height:1.3em;
+        font-size: 1em;
+        text-indent: 1em;
+        letter-spacing: 2px;
+        word-break: break-all;
+      }
+     .pro-timeline{
+     	 width:90%;
+     	 max-width:1000px;
+     	 position: relative;
+       }
+      .pro-timeline::before{
+      	content:"";
+      	width:4px;
+      	height:95%;
+      	position: absolute;
+             top:38px;
+             left:18px;
+             background:#d7e4ed;
+             z-index:-1;
+          }
+     .pro-timeline .timeline-block{
+            margin-bottom:2em;
+            position: relative;
+            height:200px;
+     }
+     .timeline-block:nth-of-type(0){
+     	margin-bottom:0px;
+     }
+     .timeblock::after{
+     	content:"";
+     	display:table;
+     	clear:both;
+     }
+     .timeline-content h3{
+     	margin:0px;
+     }
+     .timeline-block .timeline-img{
+     	width:50px;
+     	height:50px;
+     	position: relative;
+     	top:0px;
+     	left:0px;
+     	border-radius: 50%;
+             box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+              background: rgba(10, 203, 200, 0.13);
+              display:inline-block;
+     }
+     .timeline-img img{
+     	display:block;
+     	width:24px;
+     	height:24px;
+     	position: absolute;
+     	top:19px;
+     	left:13px;
+     }
+     .timeline-img span{
+     	font-size:16px;
+     	color:#fff;
+     	font-weight:bold;
+     	position: absolute;
+     	top:5px;
+     	left:8px;
+     }
+     .timeline-block .timeline-content{
+     	position: absolute;
+     	top:10px;
+     	left:90px;
+     	width:200px;
+     }
+     .timeline-content h3{
+     	display:inline-block;
+     }
+     .timeline-content img{
+     	width:80%;
+     }
+     footer{
+     	text-align:center;
+     	color:white;
+     }
 	</style>
 </head>
 <body>
-	<div>
-		<img src="images/tt.jpg"  alt="">
+	<header id="header" class="">
+		<img src="http://1.yuhuo.sinaapp.com/tt.jpg" title="唐嫣">
+		<span>唐嫣</span>
+	</header><!-- /header -->
+	<div class="wrap-page">
+        <section>
+        	 <h3>个人简介</h3>
+        	 <p>中国实力派演员，内地花旦之一，深受广大粉丝喜爱</p>
+        </section>
+        <section>
+        	<h3>早年经历</h3>
+        	<p>唐嫣，1983年12月6日出生于上海，中国女演员。2006年毕业于中央戏剧学院表演系本科班。
+2004年被张艺谋钦定为“奥运宝贝”，赴雅典参与“中国8分钟”的闭幕式表演。2007年出演《诛仙》MV女主角陆雪琪。2009年在仙侠剧《仙剑奇侠传三》中出演紫萱一角深入人心。2011年主演都市情感剧《夏家三千金》而受到广泛关注。2012年成立唐嫣工作室，担任其主演微电影《逐爱之旅》的制作人。</p>
+<p>
+2015年唐嫣主演的电视剧《何以笙箫默》、《千金女贼》、《活色生香》、《盗墓笔记》、《克拉恋人》轮番轰炸荧屏，均取得不俗成绩。同年，位列福布斯中国名人榜第20名，担任第六届中国大学生电视节推广大使。</p>
+        </section>
+  <section>
+           <h3>演艺经历</h3>
+        	<p>领。[2] 
+2001年11月3日，18岁的唐嫣在第三届舒蕾世纪星全国电视总决赛中荣获冠军[3]  ，并获得“健康之星”单项奖。2004年，唐嫣被导演张艺谋选中，成为“奥运宝贝”之一，8月29日赴雅典参加雅典奥运会闭幕式“中国8分钟”[4]  ，代表中国站在世界的舞台上。唐嫣与其他十三名中国女孩一样，[5]  经过多次筛选，从上千名的中戏、北影、民族大学学艺术的学生中被选出来，穿着由设计师叶锦添改良的中国传统风格的服装，用二胡、琵琶等传统的乐器演奏了中国名曲《茉莉花》。[6-7] </p>
+  </section>
+  <section class="pro-timeline">
+          <h3>主要作品</h3>
+          <div class="timeline-block">
+        	          <div class="timeline-img">
+        	        	     <img src="img/cd-icon-movie.svg" alt="">
+        	        	    <span>2015</span>
+        	          </div>
+                       <div class="timeline-content">
+        	                 <h3>活色生香</h3>
+        	          <img src="img/hssx.jpg" alt="">
+        	        </div>
+         </div>
+         <div class="timeline-block">
+        	         <div class="timeline-img">
+        	        	   <img src="img/cd-icon-movie.svg" alt="">
+        	        	   <span>2014</span>
+        	        </div>
+        	        <div class="timeline-content">
+        	                <h3>露水红颜</h3>
+        	        	   <img src="img/lshy.jpg" alt="">
+        	        </div>
+         </div>
+         <div class="timeline-block">
+        	         <div class="timeline-img">
+        	        	  <img src="img/cd-icon-movie.svg" alt="">
+        	        	  <span>2013</span>
+        	        </div>
+        	        <div class="timeline-content">
+        	               <h3>克拉恋人</h3>
+        	        	  <img src="img/kllr.jpg" alt="">
+        	        </div>
+        </div>
+ </section>
+        <section>
+        	<h3>人物评价</h3>
+        	<p></p>
+        </section>
 	</div>
+	<footer>
+		<p>© <span>唐嫣</span>2015 by moge</p>
+	</footer>
 </body>
 </html>
