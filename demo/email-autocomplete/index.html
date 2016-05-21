@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN-hans">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		 #suggest>li:hover{
+		 	background:#eaeaea;
+		 }
+		 .container{
+		     width:80%;
+		     margin:50px auto;
+		 }
+	</style>
+</head>
+<body>
+<div class="container">
+	<input type="text" id='search'>
+	<div >
+		<ul id="suggest">
+		</ul>
+	</div>
+</div>
+</body>
+<script src="emailAutocomplete.js"></script>
+<script type="text/javascript">
+	var auto=new EmailAutocomplete({
+         emailInputId:'search',
+         suggestListId:'suggest',
+         domains:["qq.com","163.com","gmail.com","126.com","sina.com",'189.com','123.com'],
+         listStyles:{
+         },
+         ulStyles:{
+            fontSize:'20px',
+            width:'200px',
+            listStyleType:'none',
+            margin:'0px',
+            padding:'0px'
+         },
+         chooseColor:'red',
+         onSelected:function(){
+             console.log('hello');
+         }
+	});
+</script>
+		
+</html>
